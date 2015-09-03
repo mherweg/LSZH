@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>zurich-rega_center.ac</path>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Fassade</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.1 </red>
+      <green> 0.1 </green>
+      <blue> 0.05 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Fassade</object-name>
+    <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+    
+   <animation>
+    <type>material</type>
+    <object-name>Fassade2</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.1 </red>
+      <green> 0.1 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Fenster2</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation> 
+
+   <animation>
+    <type>material</type>
+    <object-name>Fenster3</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.8 </red>
+      <green> 0.8 </green>
+      <blue> 0.8 </blue>
+    </emission>
+  </animation>  
+
+   <animation>
+    <type>material</type>
+    <object-name>Fenster4</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.6 </red>
+      <green> 0.6 </green>
+      <blue> 0.6 </blue>
+    </emission>
+  </animation>  
+
+   <animation>
+    <type>material</type>
+    <object-name>Rolltor2</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation> 
+
+   <animation>
+    <type>material</type>
+    <object-name>Rolltor3</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation>   
+  
+   <animation>
+    <type>material</type>
+    <object-name>Doors</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation> 
+  
+   <animation>
+    <type>material</type>
+    <object-name>Doors2</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation>  
+  
+   <animation>
+    <type>material</type>
+    <object-name>Tor_transparent</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation> 
+  
+   <animation>
+    <type>material</type>
+    <object-name>Luefter</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation>
+  
+   <animation>
+    <type>material</type>
+    <object-name>rega</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 1.0 </blue>
+    </emission>
+  </animation> 
+  
+   <animation>
+    <type>material</type>
+    <object-name>Execujet</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation> 
+  
+   <animation>
+    <type>material</type>
+    <object-name>Dach1</object-name>
+	<object-name>Dach2</object-name>
+	<object-name>Dach3</object-name>
+	<object-name>Dach4</object-name>
+	<object-name>Dach5</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.2 </red>
+      <green> 0.2 </green>
+      <blue> 0.1 </blue>
+    </emission>
+  </animation>  
+</PropertyList>

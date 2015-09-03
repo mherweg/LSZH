@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!-- project:  -->
+<!-- cursor: 0.000000000000 0.000000000000 0.000000000000 -->
+
+<PropertyList>
+	<path>memorial.blumberg.ac</path>
+
+ 	<animation> 
+		<type>range</type> 
+		<min-m>0</min-m> 
+		<max-m>25000</max-m> 
+	</animation>
+
+	<PlaneXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</PlaneXparams>
+
+	<animation>
+		<name>PlaneXGroup</name>
+		<object-name>PlaneX0</object-name>
+		<object-name>PlaneX1</object-name>
+		<object-name>PlaneX2</object-name>
+		<object-name>PlaneX3</object-name>
+	</animation>
+
+ 	<!--<animation> 
+		<type>select</type> 
+		<name>PlaneXGroupNight</name> 
+		<object-name>PlaneXGroup</object-name> 
+		<condition> 
+			<greater-than> 
+				<property>/sim/time/sun-angle-rad</property> 
+				<value>1.57</value> 
+			</greater-than> 
+		</condition> 
+	</animation>-->
+
+ 	<animation> 
+		<type>alpha-test</type> 
+		<object-name>PlaneXGroup</object-name> 
+		<alpha-factor>0.001</alpha-factor> 
+	</animation>
+
+ 	<animation> 
+		<type>translate</type> 
+		<object-name>PlaneX0</object-name> 
+		<offset-m>0.310142</offset-m> 
+		<axis> 
+			<x>-0.16644</x> 
+			<y>-0.22192</y> 
+			<z>0.1387</z> 
+		</axis> 
+	</animation>
+
+ 	<animation> 
+		<type>translate</type> 
+		<object-name>PlaneX1</object-name> 
+		<offset-m>0.391102</offset-m> 
+		<axis> 
+			<x>-0.046233</x> 
+			<y>-0.388359</y> 
+			<z>0</z> 
+		</axis> 
+	</animation>
+
+ 	<animation> 
+		<type>translate</type> 
+		<object-name>PlaneX2</object-name> 
+		<offset-m>0.421103</offset-m> 
+		<axis> 
+			<x>0.064727</x> 
+			<y>-0.416099</y> 
+			<z>0</z> 
+		</axis> 
+	</animation>
+
+ 	<animation> 
+		<type>translate</type> 
+		<object-name>PlaneX3</object-name> 
+		<offset-m>0.34536</offset-m> 
+		<axis> 
+			<x>0.19418</x> 
+			<y>-0.24966</y> 
+			<z>0.1387</z> 
+		</axis> 
+	</animation>
+
+ 	<animation> 
+		<type>billboard</type> 
+		<object-name>PlaneX0</object-name> 
+		<spherical type="bool">true</spherical> 
+	</animation>
+
+ 	<animation> 
+		<type>billboard</type> 
+		<object-name>PlaneX1</object-name> 
+		<spherical type="bool">true</spherical> 
+	</animation>
+
+ 	<animation> 
+		<type>billboard</type> 
+		<object-name>PlaneX2</object-name> 
+		<spherical type="bool">true</spherical> 
+	</animation>
+
+ 	<animation> 
+		<type>billboard</type> 
+		<object-name>PlaneX3</object-name> 
+		<spherical type="bool">true</spherical> 
+	</animation>
+
+ 	<animation> 
+		<type>dist-scale</type> 
+		<object-name>PlaneX0</object-name> 
+		<interpolation> 
+			<entry> 
+				<ind>0</ind> 
+				<dep alias="../../../../PlaneXparams/light-near"/> 
+			</entry> 
+			<entry> 
+				<ind>500</ind> 
+				<dep alias="../../../../PlaneXparams/light-med"/> 
+			</entry> 
+			<entry> 
+				<ind>16000</ind> 
+				<dep alias="../../../../PlaneXparams/light-far"/> 
+			</entry> 
+		</interpolation> 
+	</animation>
+
+ 	<animation> 
+		<type>dist-scale</type> 
+		<object-name>PlaneX1</object-name> 
+		<interpolation> 
+			<entry> 
+				<ind>0</ind> 
+				<dep alias="../../../../PlaneXparams/light-near"/> 
+			</entry> 
+			<entry> 
+				<ind>500</ind> 
+				<dep alias="../../../../PlaneXparams/light-med"/> 
+			</entry> 
+			<entry> 
+				<ind>16000</ind> 
+				<dep alias="../../../../PlaneXparams/light-far"/> 
+			</entry> 
+		</interpolation> 
+	</animation>
+
+ 	<animation> 
+		<type>dist-scale</type> 
+		<object-name>PlaneX2</object-name> 
+		<interpolation> 
+			<entry> 
+				<ind>0</ind> 
+				<dep alias="../../../../PlaneXparams/light-near"/> 
+			</entry> 
+			<entry> 
+				<ind>500</ind> 
+				<dep alias="../../../../PlaneXparams/light-med"/> 
+			</entry> 
+			<entry> 
+				<ind>16000</ind> 
+				<dep alias="../../../../PlaneXparams/light-far"/> 
+			</entry> 
+		</interpolation> 
+	</animation>
+
+ 	<animation> 
+		<type>dist-scale</type> 
+		<object-name>PlaneX3</object-name> 
+		<interpolation> 
+			<entry> 
+				<ind>0</ind> 
+				<dep alias="../../../../PlaneXparams/light-near"/> 
+			</entry> 
+			<entry> 
+				<ind>500</ind> 
+				<dep alias="../../../../PlaneXparams/light-med"/> 
+			</entry> 
+			<entry> 
+				<ind>16000</ind> 
+				<dep alias="../../../../PlaneXparams/light-far"/> 
+			</entry> 
+		</interpolation> 
+	</animation>
+
+</PropertyList>

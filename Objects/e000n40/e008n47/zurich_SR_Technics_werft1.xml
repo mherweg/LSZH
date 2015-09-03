@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>zurich_SR_Technics_werft1.ac</path>
+  <nasal>
+     <load>
+     if (!contains(globals, "scenery")) globals["scenery"] = {};
+     if (!contains(scenery, "LSZH")) scenery["LSZH"] = {};
+     if (!contains(scenery.LSZH, "hangar")) scenery.LSZH["hangar"] = {};
+     if (contains(scenery, "sharedDoor")) {
+       scenery.LSZH.hangar[1] =
+         { door :
+           [scenery.sharedDoor.new("/scenery/LSZH/hangar[1]/door[0]", 30),
+            scenery.sharedDoor.new("/scenery/LSZH/hangar[1]/door[1]", 30)
+           ]
+         };
+     } else {
+       scenery.LSZH.hangar[1] =
+         { door :
+           [aircraft.door.new("/scenery/LSZH/hangar[1]/door[0]", 30),
+            aircraft.door.new("/scenery/LSZH/hangar[1]/door[1]", 30)
+           ]
+         };
+     }
+    </load>
+    <unload>
+     if (contains(scenery, "sharedDoor")) {
+       scenery.LSZH.hangar[1].door[0].destroy();
+       scenery.LSZH.hangar[1].door[1].destroy();
+     }
+    </unload>
+  </nasal>
+
+    <!-- if left doors are on the left side, turn them -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorD_links</object-name>
+      <object-name>TorC_links</object-name>
+      <object-name>TorB_links</object-name>
+      <object-name>TorA_links</object-name>
+      <object-name>FensterD_links</object-name>
+      <object-name>FensterC_links</object-name>
+      <object-name>FensterB_links</object-name>
+      <object-name>FensterA_links</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep>-17.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x1-m> 69.24</x1-m>
+				<y1-m>244.65</y1-m>
+				<z1-m>  0.30</z1-m>
+				<x2-m> 73.42</x2-m>
+				<y2-m>241.78</y2-m>
+				<z2-m>  0.30</z2-m>
+	    </axis>
+    </animation>
+    <animation>
+	    <type>rotate</type>
+      <object-name>TorD_links</object-name>
+      <object-name>TorC_links</object-name>
+      <object-name>TorB_links</object-name>
+      <object-name>TorA_links</object-name>
+      <object-name>FensterD_links</object-name>
+      <object-name>FensterC_links</object-name>
+      <object-name>FensterB_links</object-name>
+      <object-name>FensterA_links</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 0.70 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 0.90 </ind><dep>-90.00 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep>-90.00 </dep></entry>
+	    </interpolation>
+      <center>
+        <x-m>  70.47</x-m>
+        <y-m> 241.78</y-m>
+        <z-m>   0.30</z-m>
+      </center>
+	    <axis>
+				<x> 0</x>
+				<y> 0</y>
+				<z> 1</z>
+	    </axis>
+    </animation>
+
+    <!-- if right doors are on the right side, turn them -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorD_rechts</object-name>
+      <object-name>TorC_rechts</object-name>
+      <object-name>TorB_rechts</object-name>
+      <object-name>TorA_rechts</object-name>
+      <object-name>FensterD_rechts</object-name>
+      <object-name>FensterC_rechts</object-name>
+      <object-name>FensterB_rechts</object-name>
+      <object-name>FensterA_rechts</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep> 17.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x1-m>189.21</x1-m>
+				<y1-m>241.78</y1-m>
+				<z1-m>  0.30</z1-m>
+				<x2-m>192.36</x2-m>
+				<y2-m>244.65</y2-m>
+				<z2-m>  0.30</z2-m>
+	    </axis>
+    </animation>
+    <animation>
+	    <type>rotate</type>
+      <object-name>TorD_rechts</object-name>
+      <object-name>TorC_rechts</object-name>
+      <object-name>TorB_rechts</object-name>
+      <object-name>TorA_rechts</object-name>
+      <object-name>FensterD_rechts</object-name>
+      <object-name>FensterC_rechts</object-name>
+      <object-name>FensterB_rechts</object-name>
+      <object-name>FensterA_rechts</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 0.70 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 0.90 </ind><dep> 90.00 </dep></entry>
+		    <entry><ind> 1.0 </ind><dep>  90.00 </dep></entry>
+	    </interpolation>
+      <center>
+        <x-m> 193.42 </x-m>
+        <y-m> 241.78</y-m>
+        <z-m>   0.30</z-m>
+      </center>
+	    <axis>
+				<x> 0</x>
+				<y> 0</y>
+				<z> 1</z>
+	    </axis>
+    </animation>
+
+  <!-- push the left doors to the left side -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorC_links</object-name>
+      <object-name>FensterC_links</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>-18.63 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorB_links</object-name>
+      <object-name>FensterB_links</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>-37.26 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorA_links</object-name>
+      <object-name>FensterA_links</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>-55.89 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <!-- push the right doors to the right side -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorC_rechts</object-name>
+      <object-name>FensterC_rechts</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep> 18.63 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorB_rechts</object-name>
+      <object-name>FensterB_rechts</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep> 37.26 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorA_rechts</object-name>
+      <object-name>FensterA_rechts</object-name>
+	    <property>/scenery/LSZH/hangar[1]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep> 55.89 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <!-- click -->
+    <animation>
+    <type>pick</type>
+    <object-name>TorA_links</object-name>
+    <object-name>TorB_links</object-name>
+    <object-name>TorC_links</object-name>
+    <object-name>TorD_links</object-name>
+    <object-name>FensterD_links</object-name>
+    <object-name>FensterC_links</object-name>
+    <object-name>FensterB_links</object-name>
+    <object-name>FensterA_links</object-name>
+    <visible>true</visible>
+    <action>
+     <name>click</name>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+      <command>nasal</command>
+      <script>scenery.LSZH.hangar[1].door[0].toggle();</script>
+     </binding>
+    </action>
+    </animation>
+
+    <animation>
+    <type>pick</type>
+    <object-name>TorA_rechts</object-name>
+    <object-name>TorB_rechts</object-name>
+    <object-name>TorC_rechts</object-name>
+    <object-name>TorD_rechts</object-name>
+    <object-name>FensterD_rechts</object-name>
+    <object-name>FensterC_rechts</object-name>
+    <object-name>FensterB_rechts</object-name>
+    <object-name>FensterA_rechts</object-name>
+    <visible>true</visible>
+    <action>
+     <name>click</name>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+      <command>nasal</command>
+      <script>scenery.LSZH.hangar[1].door[1].toggle();</script>
+     </binding>
+    </action>
+    </animation>
+
+  <!-- ############### end of doors animation ################### -->
+
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Fenster1</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation>
+
+    <animation>
+    <type>material</type>
+    <object-name>Fenster2</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.8 </red>
+      <green> 0.8 </green>
+      <blue> 0.3 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Fenster3</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation> 
+
+   <animation>
+    <type>material</type>
+    <object-name>Fassade_Buero</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation>  
+
+   <animation>
+    <type>material</type>
+    <object-name>TorA_links</object-name>
+    <object-name>TorB_links</object-name>
+    <object-name>TorC_links</object-name>
+    <object-name>TorD_links</object-name>
+    <object-name>TorA_rechts</object-name> 
+	<object-name>TorB_rechts</object-name> 
+	<object-name>TorC_rechts</object-name> 
+	<object-name>TorD_rechts</object-name> 
+	<condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation>
+	
+   <animation>
+    <type>material</type>
+    <object-name>FensterA_links</object-name>
+    <object-name>FensterB_links</object-name>
+    <object-name>FensterC_links</object-name>
+    <object-name>FensterD_links</object-name>
+    <object-name>FensterA_rechts</object-name> 
+	<object-name>FensterB_rechts</object-name> 
+    <object-name>FensterC_rechts</object-name> 
+    <object-name>FensterD_rechts</object-name> 
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation>   
+   
+   <animation>
+    <type>material</type>
+    <object-name>logo-sr-technics</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 1.0 </blue>
+    </emission>
+  </animation> 
+
+  
+   <animation>
+    <type>material</type>
+    <object-name>DEMAG_logo</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 1.0 </blue>
+    </emission>
+  </animation> 
+  
+   <animation>
+    <type>material</type>
+    <object-name>Krankabine</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 1.0 </red>
+      <green> 1.0 </green>
+      <blue> 1.0 </blue>
+    </emission>
+  </animation>  
+  
+</PropertyList>

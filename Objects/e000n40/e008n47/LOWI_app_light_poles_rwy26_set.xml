@@ -1,0 +1,1243 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!-- LOWI Custom Approach Light Set                                -->
+<!-- v0.80 - 2011.01.06 by Oliver Thurau                           -->
+<!-- RWY 26 Approach lights including the Flash Poles in Innsbruck -->
+
+<nasal>
+	<load>
+
+		print("setting FLASH COUNTER");
+		var loop_id = 0;
+		var flash_count = 0;
+		
+			var loop = func(id) {
+				id == loop_id or return;
+				
+				var flash_num = (flash_count += 1);
+				#print ("flash_num  ", flash_num);
+				
+				setprop("/scenery/LOWI/LOWI_r26_app_flash/light-number", flash_num);
+				
+				if (flash_num == 40){
+				flash_count = 0;
+				#print("resetting FLASH COUNTER");
+				};
+				
+			
+			
+			
+			settimer(func { loop(id) }, 0.05);
+			}
+			loop(loop_id += 1);
+			
+	</load>
+	
+	<unload>loop_id += 1</unload>
+	
+</nasal>
+
+<!-- Approach Light - Placing Help - on Runway 26 
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> -2000.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+-->
+
+<!-- Approach Light - Green static beam set of 18 lamps- THR Runway 26 
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+-->
+
+
+<!-- From Treshhold at x-m 0  -->
+
+<!-- Approach Light small - 40 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 30.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_40.xml</path>
+    <offsets>
+      <x-m> 30.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 30.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 39 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 60.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_39.xml</path>
+    <offsets>
+      <x-m> 60.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 60.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 38 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 90.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_38.xml</path>
+    <offsets>
+      <x-m> 90.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 90.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 37 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 120.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_37.xml</path>
+    <offsets>
+      <x-m> 120.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 120.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 36 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 150.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_36.xml</path>
+    <offsets>
+      <x-m> 150.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 150.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 35 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 180.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_35.xml</path>
+    <offsets>
+      <x-m> 180.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 180.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 34 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 210.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_34.xml</path>
+    <offsets>
+      <x-m> 210.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 210.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 33 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 240.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_33.xml</path>
+    <offsets>
+      <x-m> 240.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 240.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 32 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 270.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_32.xml</path>
+    <offsets>
+      <x-m> 270.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 270.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 31 - 5set right + 5set left-->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 300.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_31.xml</path>
+    <offsets>
+      <x-m> 300.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 300.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 300.000 </x-m>
+      <y-m>-8.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 300.000 </x-m>
+      <y-m> 8.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 30 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 330.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_30.xml</path>
+    <offsets>
+      <x-m> 330.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 330.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 29 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 360.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_29.xml</path>
+    <offsets>
+      <x-m> 360.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 360.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 28 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 390.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_28.xml</path>
+    <offsets>
+      <x-m> 390.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 390.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 27 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 420.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_27.xml</path>
+    <offsets>
+      <x-m> 420.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 420.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 26 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 450.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_26.xml</path>
+    <offsets>
+      <x-m> 450.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 450.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 25 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 480.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_25.xml</path>
+    <offsets>
+      <x-m> 480.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 480.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 24 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 510.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_24.xml</path>
+    <offsets>
+      <x-m> 510.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 510.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 23 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 540.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_23.xml</path>
+    <offsets>
+      <x-m> 540.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 540.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light small - 22 -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 570.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_22.xml</path>
+    <offsets>
+      <x-m> 570.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 570.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 21 - Placing Help - last Flashlight of ALSF 600m Light -->
+<model>
+	<path>LOWI_app_light_poles_low_flash.ac</path>
+    <offsets>
+      <x-m> 600.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_21.xml</path>
+    <offsets>
+      <x-m> 600.000 </x-m>
+      <y-m>-0.500 </y-m>
+      <z-m> 1.500 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_app_light_poles_low_static_set.xml</path>
+    <offsets>
+      <x-m> 600.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+    
+
+<!-- Approach Light - 20 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 815.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_20.xml</path>
+    <offsets>
+      <x-m> 815.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 19 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 1030.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_19.xml</path>
+    <offsets>
+      <x-m> 1030.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 18 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 1245.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_18.xml</path>
+    <offsets>
+      <x-m> 1245.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 17 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 1460.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_17.xml</path>
+    <offsets>
+      <x-m> 1460.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 16 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 1675.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_16.xml</path>
+    <offsets>
+      <x-m> 1675.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 15 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 1890.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_15.xml</path>
+    <offsets>
+      <x-m> 1890.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 14 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 2105.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_14.xml</path>
+    <offsets>
+      <x-m> 2105.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 13 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 2320.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_13.xml</path>
+    <offsets>
+      <x-m> 2320.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 12 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 2535.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_12.xml</path>
+    <offsets>
+      <x-m> 2535.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 11 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 2750.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_11.xml</path>
+    <offsets>
+      <x-m> 2750.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 10 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 2965.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_10.xml</path>
+    <offsets>
+      <x-m> 2965.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 09 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 3180.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_09.xml</path>
+    <offsets>
+      <x-m> 3180.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 08 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 3395.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_08.xml</path>
+    <offsets>
+      <x-m> 3395.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 07 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 3610.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_07.xml</path>
+    <offsets>
+      <x-m> 3610.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 06 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 3825.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_06.xml</path>
+    <offsets>
+      <x-m> 3825.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 05 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 4040.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_05.xml</path>
+    <offsets>
+      <x-m> 4040.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 04 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 4255.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_04.xml</path>
+    <offsets>
+      <x-m> 4255.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 03-->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 4470.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_03.xml</path>
+    <offsets>
+      <x-m> 4470.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 02 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 4685.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_02.xml</path>
+    <offsets>
+      <x-m> 4685.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<!-- Approach Light - 01 -->
+<model>
+	<path>LOWI_app_light_poles_high.ac</path>
+    <offsets>
+      <x-m> 4900.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> 0.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+<model>
+	<path>LOWI_r26_strobe_01.xml</path>
+    <offsets>
+      <x-m> 4900.200 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 18.400 </z-m>
+      <pitch-deg>-7.00</pitch-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+ 
+	<!-- LOD -->
+	<animation>
+	  <type>range</type>
+	  <min-m>0</min-m>
+	  <max-m>20000</max-m>
+    </animation>
+	
+
+</PropertyList>
+

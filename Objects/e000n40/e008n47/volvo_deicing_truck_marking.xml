@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+<!--      
+<path>volvo_deicing_truck_marking.ac</path>
+
+ roll -0.04958689213 pitch -0.4958678484 -->
+<model>
+    <path>volvo_deicing_truck_marking.ac</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <pitch-deg> -0.4958678484</pitch-deg>
+	  <roll-deg> -0.04958689213</roll-deg>
+	  <heading-deg>0.0 </heading-deg>
+    </offsets>
+</model>
+
+	<animation>
+		<object-name>deice_marking</object-name>
+		<object-name>deice_marking.001</object-name>
+		<enable-hot type="bool">false</enable-hot>
+	</animation>
+
+<!-- LOD -->
+<animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>7000</max-m>
+</animation>
+
+       
+</PropertyList>

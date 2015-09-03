@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>zurich_SR_Technics_werft2.ac</path>
+
+  <!-- ############### start doors animation ################### -->
+  <nasal>
+     <load>
+     if (!contains(globals, "scenery")) globals["scenery"] = {};
+     if (!contains(scenery, "LSZH")) scenery["LSZH"] = {};
+     if (!contains(scenery.LSZH, "hangar")) scenery.LSZH["hangar"] = {};
+     if (contains(scenery, "sharedDoor")) {
+       scenery.LSZH.hangar[2] =
+         { door :
+           [scenery.sharedDoor.new("/scenery/LSZH/hangar[2]/door[0]", 30),
+            scenery.sharedDoor.new("/scenery/LSZH/hangar[2]/door[1]", 30)
+           ]
+         };
+     } else {
+       scenery.LSZH.hangar[2] =
+         { door :
+           [aircraft.door.new("/scenery/LSZH/hangar[2]/door[0]", 30),
+            aircraft.door.new("/scenery/LSZH/hangar[2]/door[1]", 30)
+           ]
+         };
+     }
+    </load>
+    <unload>
+     if (contains(scenery, "sharedDoor")) {
+       scenery.LSZH.hangar[2].door[0].destroy();
+       scenery.LSZH.hangar[2].door[1].destroy();
+     }
+    </unload>
+  </nasal>
+
+    <!-- if left doors are on the left side, turn them -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorD_L</object-name>
+      <object-name>TorC_L</object-name>
+      <object-name>TorB_L</object-name>
+      <object-name>TorA_L</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep>-17.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y>-1</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+    <animation>
+	    <type>rotate</type>
+      <object-name>TorD_L</object-name>
+      <object-name>TorC_L</object-name>
+      <object-name>TorB_L</object-name>
+      <object-name>TorA_L</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep>-90.00 </dep></entry>
+	    </interpolation>
+      <center>
+        <x-m>  76.06 </x-m>
+        <y-m>  59.59 </y-m>
+        <z-m>  0.000 </z-m>
+      </center>
+	    <axis>
+				<x> 0</x>
+				<y> 0</y>
+				<z> 1</z>
+	    </axis>
+    </animation>
+
+    <!-- if right doors are on the right side, turn them -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorD_R</object-name>
+      <object-name>TorC_R</object-name>
+      <object-name>TorB_R</object-name>
+      <object-name>TorA_R</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep> 17.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 1</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+    <animation>
+	    <type>rotate</type>
+      <object-name>TorD_R</object-name>
+      <object-name>TorC_R</object-name>
+      <object-name>TorB_R</object-name>
+      <object-name>TorA_R</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>  0.00 </dep></entry>
+		    <entry><ind> 1.00 </ind><dep> 86.00 </dep></entry>
+	    </interpolation>
+      <center>
+        <x-m> 249.64 </x-m>
+        <y-m>  59.59 </y-m>
+        <z-m>  0.000 </z-m>
+      </center>
+	    <axis>
+				<x> 0</x>
+				<y> 0</y>
+				<z> 1</z>
+	    </axis>
+    </animation>
+
+  <!-- push the left doors to the left side -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorC_L</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>-25.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorB_L</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>-50.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorA_L</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[0]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep>-75.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <!-- push the right doors to the right side -->
+    <animation>
+	    <type>translate</type>
+      <object-name>TorC_R</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep> 25.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorB_R</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep> 50.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <animation>
+	    <type>translate</type>
+      <object-name>TorA_R</object-name>
+	    <property>/scenery/LSZH/hangar[2]/door[1]/position-norm</property>
+	    <factor>1</factor>
+	    <interpolation>
+		    <entry><ind> 0.00 </ind><dep>  0.0 </dep></entry>
+		    <entry><ind> 0.80 </ind><dep> 75.0 </dep></entry>
+	    </interpolation>
+	    <axis>
+				<x> 1</x>
+				<y> 0</y>
+				<z> 0</z>
+	    </axis>
+    </animation>
+
+    <!-- click -->
+    <animation>
+    <type>pick</type>
+    <object-name>TorA_L</object-name>
+    <object-name>TorB_L</object-name>
+    <object-name>TorC_L</object-name>
+    <object-name>TorD_L</object-name>
+    <visible>true</visible>
+    <action>
+     <name>click</name>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+      <command>nasal</command>
+      <script>scenery.LSZH.hangar[2].door[0].toggle();</script>
+     </binding>
+    </action>
+    </animation>
+
+    <animation>
+    <type>pick</type>
+    <object-name>TorA_R</object-name>
+    <object-name>TorB_R</object-name>
+    <object-name>TorC_R</object-name>
+    <object-name>TorD_R</object-name>
+    <visible>true</visible>
+    <action>
+     <name>click</name>
+     <button>0</button>
+     <repeatable>false</repeatable>
+     <binding>
+      <command>nasal</command>
+      <script>scenery.LSZH.hangar[2].door[1].toggle();</script>
+     </binding>
+    </action>
+    </animation>
+
+  <!-- ############### end of doors animation ################### -->
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-property>sim/rendering/static-lod/bare</max-property>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>TorA_L</object-name>
+    <object-name>TorB_L</object-name>
+    <object-name>TorC_L</object-name>
+    <object-name>TorD_L</object-name>
+    <object-name>TorA_R</object-name>
+    <object-name>TorB_R</object-name>
+	  <object-name>TorC_R</object-name>
+	  <object-name>TorD_R</object-name>
+	<condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.3 </red>
+      <green> 0.3 </green>
+      <blue> 0.1 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>TorA_L</object-name>
+    <object-name>TorB_L</object-name>
+    <object-name>TorC_L</object-name>
+    <object-name>TorD_L</object-name>
+    <object-name>TorA_R</object-name>
+    <object-name>TorB_R</object-name>
+	  <object-name>TorC_R</object-name>
+    <object-name>TorD_R</object-name>
+     <condition>
+      <less-than-equals>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </less-than-equals>
+    </condition>
+    <emission>
+      <red>   0.0 </red>
+      <green> 0.0 </green>
+      <blue>  0.0 </blue>
+    </emission>
+  </animation>
+    
+   <animation>
+    <type>material</type>
+    <object-name>Oberlicht</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.8 </red>
+      <green> 0.8 </green>
+      <blue> 0.3 </blue>
+    </emission>
+  </animation>
+
+   <animation>
+    <type>material</type>
+    <object-name>Oberlichter2</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.8 </red>
+      <green> 0.8 </green>
+      <blue> 0.3 </blue>
+    </emission>
+  </animation>  
+
+   <animation>
+    <type>material</type>
+    <object-name>Fenster</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.8 </red>
+      <green> 0.8 </green>
+      <blue> 0.8 </blue>
+    </emission>
+  </animation>  
+
+   <animation>
+    <type>material</type>
+    <object-name>Krantuer</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.2 </red>
+      <green> 0.2 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation> 
+
+   <animation>
+    <type>material</type>
+    <object-name>Kranfenster</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.2 </red>
+      <green> 0.2 </green>
+      <blue> 0.2 </blue>
+    </emission>
+  </animation>       
+	  
+   <animation>
+    <type>material</type>
+    <object-name>ABUS</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red> 0.5 </red>
+      <green> 0.5 </green>
+      <blue> 0.5 </blue>
+    </emission>
+  </animation>
+</PropertyList>
